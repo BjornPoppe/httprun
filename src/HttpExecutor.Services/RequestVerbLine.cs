@@ -7,7 +7,7 @@ namespace HttpExecutor.Services
     public class RequestVerbLine : IBlockLine
     {
         private const string GroupsRegex =
-            "^(?<verb>GET|POST|PUT|DELETE|PATCH|HEAD|OPTIONS|TRACE)[ \\t]+((?<scheme>http:\\/\\/|https:\\/\\/)(?<userpass>.*@)?(?<host>[^:\\/]*(:\\d{1,5}?)?)?)?\\/?(?<path>[a-zA-Z0-9\\.\\/\\-\\?\\=\\&_{}\\$%@:]*)(?:[ \t]+HTTP\\/(?:1\\.0|1\\.1|2|3)[ \t]*)?$";
+            "^(?<verb>GET|POST|PUT|DELETE|PATCH|HEAD|OPTIONS|TRACE)[ \\t]+((?<scheme>http:\\/\\/|https:\\/\\/)(?<userpass>.*@)?(?<host>[^:\\/]*(:\\d{1,5}?)?)?)?\\/(?<path>[a-zA-Z0-9\\.\\/\\-\\?\\=\\&_{}\\$%@:]*)(?:[ \t]+HTTP\\/(?:1\\.0|1\\.1|2|3)[ \t]*)?$";
 
         private readonly Match _regexMatch;
 
